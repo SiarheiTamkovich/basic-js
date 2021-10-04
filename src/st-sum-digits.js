@@ -14,5 +14,17 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function getSumOfDigits(/* n */) {
   throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  
+function getSum(n) {
+  let sum = 0;
+  while (n > 0 || sum > 9) {
+       if(n == 0) {
+          n = sum;
+          sum = 0;
+       }
+       sum = sum + n % 10;
+       n = Math.floor(n / 10);
+  }
+  return sum;
+}
 }
