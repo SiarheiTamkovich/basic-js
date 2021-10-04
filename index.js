@@ -110,18 +110,34 @@
  //var input = 'joe@subdomain1.com';
 
  
- function getEmailDomain(input) {
- var first_split = input.split("@")[1];
- var second_split = first_split.split(".");
-     if(second_split.length == 2) {
-        console.log('domain is : '+first_split);
-        return first_split;
+//  function getEmailDomain(input) {
+//  var first_split = input.split("@")[1];
+//  var second_split = first_split.split(".");
+//      if(second_split.length == 2) {
+//         console.log('domain is : '+first_split);
+//         return first_split;
 
-     } else if(second_split.length > 2) {
-         var str = first_split.substring(first_split.indexOf(".") + 1);
-       console.log('domain is : '+str);
-        return str;
-     }
+//      } else if(second_split.length > 2) {
+//          var str = first_split.substring(first_split.indexOf(".") + 1);
+//        console.log('domain is : '+str);
+//         return str;
+//      }
+// }
+
+// getEmailDomain ('joe@example.com.uk')
+
+// function validateEmail(email) {
+//         let domen = 
+//  //       var re = /\S+@\S+\.\S+/;
+//   //      return re.test(email);
+//     }
+    
+// console.log(validateEmail('anystring@anystring.anystring'));
+
+function getEmailDomain(email) {
+    //     return   let name = email.match(/^.+(?=@)/)[0];    
+    return domain = email.match(/(?<=.+@)[^@]+$/)[0]; 
 }
+        
+console.log(getEmailDomain('prettyandsimple@example.com'));
 
-getEmailDomain ('joe@subdomain1.example.com.uk')
